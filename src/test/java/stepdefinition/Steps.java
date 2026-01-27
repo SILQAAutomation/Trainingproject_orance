@@ -164,7 +164,7 @@ public class Steps extends Utility {
     @And("^I Verify Welcome Label$")
     public void iVerifyWelcomeLabel() throws Throwable {
        WebDriverWait wait = new WebDriverWait(driver, 30);// Wait for up to 30 seconds
-      WebElement welcomeLabel = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//img[@alt='client-brand-banner']")));
+      WebElement welcomeLabel = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='client brand banner']")));
       Thread.sleep(5000);
        Assert.assertTrue(welcomeLabel.isDisplayed(), "Welcome label is not displayed.");
 

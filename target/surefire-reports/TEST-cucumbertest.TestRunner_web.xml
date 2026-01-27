@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="cucumbertest.TestRunner_web" time="10.568" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="cucumbertest.TestRunner_web" time="21.859" errors="0" skipped="0">
   <properties>
-    <property name="idea.version" value="2024.1"/>
+    <property name="idea.version" value="2023.1.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-1.8\jre\bin"/>
     <property name="java.vm.version" value="25.371-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Raksha\Desktop\Automation\Training Jan 2026\Orange"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\suraj.joggessur\Desktop\Projects\Automation Testing\Trainingproject_orance"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -17,39 +17,39 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Raksha\Desktop\Automation\Training Jan 2026\Orange"/>
+    <property name="user.dir" value="C:\Users\suraj.joggessur\Desktop\Projects\Automation Testing\Trainingproject_orance"/>
     <property name="java.runtime.version" value="1.8.0_371-b11"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk-1.8\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\Raksha\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\SURAJ~1.JOG\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 11"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1\plugins\maven\lib\maven-event-listener.jar"/>
-    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin\m2.conf"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1\bin;C:\Program Files\Java\jdk-1.8\bin;C:\Program Files\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin;C:\Program Files\Java\jre-1.8\bin;C:\Program Files\Git\cmd;C:\Users\Raksha\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1\bin;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.5\bin;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Java\jre-1.8\bin;C:\Users\suraj.joggessur\Desktop\JMeter\apache-jmeter-5.6.2\bin;C:\Program Files\Jenkins;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\suraj.joggessur\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2\bin;;C:\Users\suraj.joggessur\AppData\Local\Programs\Microsoft VS Code\bin;;."/>
     <property name="jansi.passthrough" value="true"/>
-    <property name="maven.conf" value="C:\Program Files\apache-maven-3.8.1-bin\apache-maven-3.8.1/conf"/>
+    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\Raksha"/>
-    <property name="tags" value="&quot;--tags @sucessful_Sign_In&quot;"/>
+    <property name="user.home" value="C:\Users\suraj.joggessur"/>
+    <property name="tags" value="&quot;sucessful_Sign_In&quot;"/>
     <property name="user.timezone" value="Indian/Mauritius"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="Raksha"/>
-    <property name="java.class.path" value="C:\Program Files\apache-maven-3.8.1-bin\apache-maven-3.8.1\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\apache-maven-3.8.1-bin\apache-maven-3.8.1\boot\plexus-classworlds.license;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1\lib\idea_rt.jar"/>
+    <property name="user.name" value="suraj.joggessur"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2\lib\idea_rt.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-1.8\jre"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2024.1 clean test -D tags=&quot;--tags @sucessful_Sign_In&quot;"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2023.1.2 clean test -D tags=&quot;sucessful_Sign_In&quot;"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -59,7 +59,7 @@
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk-1.8\jre\lib\resources.jar;C:\Program Files\Java\jdk-1.8\jre\lib\rt.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jsse.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jce.jar;C:\Program Files\Java\jdk-1.8\jre\lib\charsets.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jfr.jar;C:\Program Files\Java\jdk-1.8\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.specification.maintenance.version" value="4"/>
-    <property name="maven.home" value="C:\Program Files\apache-maven-3.8.1-bin\apache-maven-3.8.1"/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -67,152 +67,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="cucumbertest.TestRunner_web" name="runCukes" time="10.568">
-    <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Username&apos;]&quot;}
-  (Session info: chrome=144.0.7559.97)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;SIL-LT5-RAKSHAL&apos;, ip: &apos;130.1.19.197&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_371&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=144.0.7559.96 (d7b80622cfab91c265741194e7942eefd2d21811-refs/branch-heads/7559@{#3667}), userDataDir=C:\Users\Raksha\AppData\Local\Temp\scoped_dir32620_1815234139}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, goog:processID=21840.0, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57763}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=144.0.7559.97, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 250455ee345dd01bbd2b03f3fdb92938
-*** Element info: {Using=xpath, value=//input[@placeholder=&apos;Username&apos;]}" type="cucumber.runtime.CucumberException">cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Username&apos;]&quot;}
-  (Session info: chrome=144.0.7559.97)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;SIL-LT5-RAKSHAL&apos;, ip: &apos;130.1.19.197&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_371&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=144.0.7559.96 (d7b80622cfab91c265741194e7942eefd2d21811-refs/branch-heads/7559@{#3667}), userDataDir=C:\Users\Raksha\AppData\Local\Temp\scoped_dir32620_1815234139}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, goog:processID=21840.0, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57763}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=144.0.7559.97, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 250455ee345dd01bbd2b03f3fdb92938
-*** Element info: {Using=xpath, value=//input[@placeholder=&apos;Username&apos;]}
-	at cucumber.api.testng.TestNGCucumberRunner.runCukes(TestNGCucumberRunner.java:57)
-	at cucumbertest.TestRunner_web.runCukes(TestRunner_web.java:26)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Username&apos;]&quot;}
-  (Session info: chrome=144.0.7559.97)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;SIL-LT5-RAKSHAL&apos;, ip: &apos;130.1.19.197&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_371&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=144.0.7559.96 (d7b80622cfab91c265741194e7942eefd2d21811-refs/branch-heads/7559@{#3667}), userDataDir=C:\Users\Raksha\AppData\Local\Temp\scoped_dir32620_1815234139}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, goog:processID=21840.0, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57763}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=144.0.7559.97, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 250455ee345dd01bbd2b03f3fdb92938
-*** Element info: {Using=xpath, value=//input[@placeholder=&apos;Username&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at objectrepository.Login_page.username(Login_page.java:21)
-	at stepdefinition.Steps.iInputUserNameAndPassword(Steps.java:131)
-	at ✽.And I Input User Name &quot;Admin&quot; and Password &quot;admin123&quot;(features/Login.feature:12)
-</failure>
-    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@2cfb4a64
-#Overtime
-@Main_feature
-Feature: Sign_in
-
-  #Scenario1 - Success Sign In
-  @sucessful_Sign_In
-  Scenario Outline: Successful Sign In                            &amp;#27;[90m# features/Login.feature:8&amp;#27;[0m
-    &amp;#27;[36mGiven &amp;#27;[0m&amp;#27;[36mI am on Orange Main page &quot;&lt;Browser&gt;&quot;&amp;#27;[0m
-    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Verify Login Page&amp;#27;[0m
-    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Input User Name &quot;&lt;User_Name&gt;&quot; and Password &quot;&lt;Password&gt;&quot;&amp;#27;[0m
-    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI Click on Sign In Button&amp;#27;[0m
-    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Verify Welcome Label&amp;#27;[0m
-
-    Examples: 
-Unable to take screenshot
-java.lang.NullPointerException
-
-  @Main_feature @sucessful_Sign_In
-  Scenario Outline: Successful Sign In                    &amp;#27;[90m# features/Login.feature:18&amp;#27;[0m
-    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on Orange Main page &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mChrome&amp;#27;[0m&amp;#27;[32m&quot;&amp;#27;[0m               &amp;#27;[90m# Steps.iAmOnOrangeMainPage(String)&amp;#27;[0m
-    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI Verify Login Page&amp;#27;[0m                               &amp;#27;[90m# Steps.iVerifyLoginPage()&amp;#27;[0m
-    &amp;#27;[31mAnd &amp;#27;[0m&amp;#27;[31mI Input User Name &quot;&amp;#27;[0m&amp;#27;[31m&amp;#27;[1mAdmin&amp;#27;[0m&amp;#27;[31m&quot; and Password &quot;&amp;#27;[0m&amp;#27;[31m&amp;#27;[1madmin123&amp;#27;[0m&amp;#27;[31m&quot;&amp;#27;[0m &amp;#27;[90m# Steps.iInputUserNameAndPassword(String,String)&amp;#27;[0m
-      &amp;#27;[31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Username&apos;]&quot;}
-        (Session info: chrome=144.0.7559.97)
-      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-      Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-      System info: host: &apos;SIL-LT5-RAKSHAL&apos;, ip: &apos;130.1.19.197&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_371&apos;
-      Driver info: org.openqa.selenium.chrome.ChromeDriver
-      Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=144.0.7559.96 (d7b80622cfab91c265741194e7942eefd2d21811-refs/branch-heads/7559@{#3667}), userDataDir=C:\Users\Raksha\AppData\Local\Temp\scoped_dir32620_1815234139}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, goog:processID=21840.0, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57763}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=144.0.7559.97, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-      Session ID: 250455ee345dd01bbd2b03f3fdb92938
-      *** Element info: {Using=xpath, value=//input[@placeholder=&apos;Username&apos;]}
-      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
-      	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-      	at objectrepository.Login_page.username(Login_page.java:21)
-      	at stepdefinition.Steps.iInputUserNameAndPassword(Steps.java:131)
-      	at ?.And I Input User Name &quot;Admin&quot; and Password &quot;admin123&quot;(features/Login.feature:12)
-      &amp;#27;[0m
-    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI Click on Sign In Button&amp;#27;[0m                        &amp;#27;[90m# Steps.iClickOnSignInButton()&amp;#27;[0m
-    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Verify Welcome Label&amp;#27;[0m                            &amp;#27;[90m# Steps.iVerifyWelcomeLabel()&amp;#27;[0m
-
-&amp;#27;[31mFailed scenarios:&amp;#27;[0m
-&amp;#27;[31mfeatures/Login.feature:18 &amp;#27;[0m# Scenario Outline: Successful Sign In
-
-1 Scenarios (&amp;#27;[31m1 failed&amp;#27;[0m)
-5 Steps (&amp;#27;[31m1 failed&amp;#27;[0m, &amp;#27;[36m2 skipped&amp;#27;[0m, &amp;#27;[32m2 passed&amp;#27;[0m)
-0m9.844s
-
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Username&apos;]&quot;}
-  (Session info: chrome=144.0.7559.97)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;SIL-LT5-RAKSHAL&apos;, ip: &apos;130.1.19.197&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_371&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=144.0.7559.96 (d7b80622cfab91c265741194e7942eefd2d21811-refs/branch-heads/7559@{#3667}), userDataDir=C:\Users\Raksha\AppData\Local\Temp\scoped_dir32620_1815234139}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, goog:processID=21840.0, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:57763}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=144.0.7559.97, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 250455ee345dd01bbd2b03f3fdb92938
-*** Element info: {Using=xpath, value=//input[@placeholder=&apos;Username&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at objectrepository.Login_page.username(Login_page.java:21)
-	at stepdefinition.Steps.iInputUserNameAndPassword(Steps.java:131)
-	at ?.And I Input User Name &quot;Admin&quot; and Password &quot;admin123&quot;(features/Login.feature:12)
-
-</system-out>
-    <system-err>SLF4J: No SLF4J providers were found.
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
-Starting ChromeDriver 144.0.7559.96 (d7b80622cfab91c265741194e7942eefd2d21811-refs/branch-heads/7559@{#3667}) on port 17952
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully on port 17952.
-Jan 27, 2026 1:12:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-log4j:WARN No appenders could be found for logger (freemarker.cache).
-log4j:WARN Please initialize the log4j system properly.
-</system-err>
-  </testcase>
+  <testcase classname="cucumbertest.TestRunner_web" name="runCukes" time="21.859"/>
 </testsuite>
