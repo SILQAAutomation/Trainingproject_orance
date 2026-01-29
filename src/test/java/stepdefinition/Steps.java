@@ -170,4 +170,33 @@ public class Steps extends Utility {
 
     }
 
+    @When("^I Click on Admin Section$")
+    public void iClickOnAdminSection() {
+        WebElement AdminSec = Admin_page.AdminMenu(Steps.driver);
+        AdminSec.click();
+    }
+
+    @Then("^I Access Admin Panel$")
+    public void iAccessAdminPanel() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(Steps.driver, 30); // Wait for up to 30 seconds
+        WebElement dashboardLogo = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//img[@alt='client brand banner']")));
+        Assert.assertTrue(dashboardLogo.isDisplayed(), "Dashboard is not displayed.");
+        Thread.sleep(5000);
+    }
+
+    @And("^I Search Username \"([^\"]*)\"$")
+    public void iSearchUsername(String uname) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(Steps.driver, 30);
+        WebElement usernameField = Admin_page.User_name(Steps.driver);
+        usernameField.click();
+        usernameField.sendKeys(uname);
+        WebElement Search = Admin_page.Searchfield(Steps.driver);
+        Search.click();
+        // Wait for result OR no record message
+        wait.until(ExpectedConditions.or(
+                ExpectedConditions.visibilityOfElementLocated(Admin_page.result_row),
+                ExpectedConditions.visibilityOfElementLocated(Admin_page.no_records)
+        ));
+        Thread.sleep(5000);
+    }
 }
