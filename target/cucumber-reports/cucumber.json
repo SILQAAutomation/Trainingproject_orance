@@ -3,7 +3,7 @@
     "comments": [
       {
         "line": 1,
-        "value": "#Overtime"
+        "value": "#OrangeHRM Application PIM Feature File"
       }
     ],
     "line": 4,
@@ -12,7 +12,7 @@
         "before": [
           {
             "result": {
-              "duration": 58900,
+              "duration": 73600,
               "status": "passed"
             },
             "match": {
@@ -20,14 +20,14 @@
             }
           }
         ],
-        "line": 18,
-        "name": "Successful Sign In",
+        "line": 26,
+        "name": "Successful adding of PIM",
         "description": "",
-        "id": "sign-in;successful-sign-in;;2",
+        "id": "pim;successful-adding-of-pim;;2",
         "after": [
           {
             "result": {
-              "duration": 1560535200,
+              "duration": 1421043800,
               "status": "passed"
             },
             "match": {
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 46500,
+              "duration": 132700,
               "status": "passed"
             },
             "match": {
@@ -49,7 +49,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8052050800,
+              "duration": 7287713100,
               "status": "passed"
             },
             "line": 10,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 1373895200,
+              "duration": 2419639800,
               "status": "passed"
             },
             "line": 11,
@@ -82,7 +82,7 @@
           },
           {
             "result": {
-              "duration": 510541900,
+              "duration": 363679900,
               "status": "passed"
             },
             "line": 12,
@@ -108,7 +108,7 @@
           },
           {
             "result": {
-              "duration": 3571244600,
+              "duration": 1809812400,
               "status": "passed"
             },
             "line": 13,
@@ -120,13 +120,111 @@
           },
           {
             "result": {
-              "duration": 6174433800,
+              "duration": 5828647500,
               "status": "passed"
             },
             "line": 14,
             "name": "I Verify Welcome Label",
             "match": {
               "location": "Steps.iVerifyWelcomeLabel()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1329956300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I click on PIM Tab",
+            "match": {
+              "location": "Steps.iClickOnPIMTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1114570800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I Verify PIM Page",
+            "match": {
+              "location": "Steps.iVerifyPIMPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1100241700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I Click on Add Employee Button",
+            "match": {
+              "location": "Steps.iClickOnAddEmployeeButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 637200200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I Verify Add Employee Page",
+            "match": {
+              "location": "Steps.iVerifyAddEmployeePage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 455540500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I Input First Name \"Raksha\" and Last Name \"Luchun\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Raksha",
+                  "offset": 20
+                },
+                {
+                  "val": "Luchun",
+                  "offset": 43
+                }
+              ],
+              "location": "Steps.iInputFirstNameAndLastName(String,String)"
+            },
+            "matchedColumns": [
+              4,
+              5
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 382497500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I Click on Save Button",
+            "match": {
+              "location": "Steps.iClickOnSaveButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6489502700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I Verify Personal Details Page",
+            "match": {
+              "location": "Steps.iVerifyPersonalDetailsPage()"
             },
             "keyword": "And "
           }
@@ -138,16 +236,16 @@
           },
           {
             "line": 7,
-            "name": "@sucessful_Sign_In"
+            "name": "@Adding_PIM"
           }
         ]
       }
     ],
-    "name": "Sign_in",
+    "name": "PIM",
     "description": "",
-    "id": "sign-in",
+    "id": "pim",
     "keyword": "Feature",
-    "uri": "features/Login.feature",
+    "uri": "features/PIM.feature",
     "tags": [
       {
         "line": 3,
