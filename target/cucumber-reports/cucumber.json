@@ -3,7 +3,7 @@
     "comments": [
       {
         "line": 1,
-        "value": "#OrangeHRM Application PIM Feature File"
+        "value": "#Test Scenarios for Orange HRM Admin Panel"
       }
     ],
     "line": 4,
@@ -12,7 +12,7 @@
         "before": [
           {
             "result": {
-              "duration": 73600,
+              "duration": 65100,
               "status": "passed"
             },
             "match": {
@@ -20,14 +20,14 @@
             }
           }
         ],
-        "line": 26,
-        "name": "Successful adding of PIM",
+        "line": 20,
+        "name": "Login to the System",
         "description": "",
-        "id": "pim;successful-adding-of-pim;;2",
+        "id": "admin-panel;login-to-the-system;;2",
         "after": [
           {
             "result": {
-              "duration": 1421043800,
+              "duration": 1855771899,
               "status": "passed"
             },
             "match": {
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 132700,
+              "duration": 120401,
               "status": "passed"
             },
             "match": {
@@ -49,7 +49,7 @@
         "steps": [
           {
             "result": {
-              "duration": 7287713100,
+              "duration": 8133935401,
               "status": "passed"
             },
             "line": 10,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 2419639800,
+              "duration": 3863526300,
               "status": "passed"
             },
             "line": 11,
@@ -82,7 +82,7 @@
           },
           {
             "result": {
-              "duration": 363679900,
+              "duration": 295753199,
               "status": "passed"
             },
             "line": 12,
@@ -108,7 +108,7 @@
           },
           {
             "result": {
-              "duration": 1809812400,
+              "duration": 124433500,
               "status": "passed"
             },
             "line": 13,
@@ -120,7 +120,7 @@
           },
           {
             "result": {
-              "duration": 5828647500,
+              "duration": 16115269699,
               "status": "passed"
             },
             "line": 14,
@@ -132,124 +132,122 @@
           },
           {
             "result": {
-              "duration": 1329956300,
+              "duration": 13004556800,
               "status": "passed"
             },
             "line": 15,
-            "name": "I click on PIM Tab",
+            "name": "I Click on Admin Section",
             "match": {
-              "location": "Steps.iClickOnPIMTab()"
+              "location": "Steps.iClickOnAdminSection()"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 1114570800,
+              "duration": 9816489500,
               "status": "passed"
             },
             "line": 16,
-            "name": "I Verify PIM Page",
+            "name": "I Access Admin Panel",
             "match": {
-              "location": "Steps.iVerifyPIMPage()"
+              "location": "Steps.iAccessAdminPanel()"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1100241700,
+              "duration": 8760690401,
               "status": "passed"
             },
             "line": 17,
-            "name": "I Click on Add Employee Button",
-            "match": {
-              "location": "Steps.iClickOnAddEmployeeButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 637200200,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I Verify Add Employee Page",
-            "match": {
-              "location": "Steps.iVerifyAddEmployeePage()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 455540500,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I Input First Name \"Raksha\" and Last Name \"Luchun\"",
+            "name": "I Search Username \"Admin\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Raksha",
-                  "offset": 20
-                },
-                {
-                  "val": "Luchun",
-                  "offset": 43
+                  "val": "Admin",
+                  "offset": 19
                 }
               ],
-              "location": "Steps.iInputFirstNameAndLastName(String,String)"
+              "location": "Steps.iSearchUsername(String)"
             },
             "matchedColumns": [
-              4,
-              5
+              4
             ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 382497500,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I Click on Save Button",
-            "match": {
-              "location": "Steps.iClickOnSaveButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6489502700,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I Verify Personal Details Page",
-            "match": {
-              "location": "Steps.iVerifyPersonalDetailsPage()"
-            },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "line": 3,
-            "name": "@Main_feature"
+            "line": 7,
+            "name": "@Login"
           },
           {
-            "line": 7,
-            "name": "@Adding_PIM"
+            "line": 3,
+            "name": "@Admin_Panel"
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 22,
+            "value": "#Scenario2 - Access and verify Admin Panel"
+          }
+        ],
+        "before": [
+          {
+            "result": {
+              "duration": 27300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Access Admin Panel",
+        "description": "",
+        "id": "admin-panel;access-admin-panel",
+        "after": [
+          {
+            "result": {
+              "duration": 5431999,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.setup()"
+            }
+          },
+          {
+            "result": {
+              "duration": 30900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "tags": [
+          {
+            "line": 23,
+            "name": "@Admin"
           }
         ]
       }
     ],
-    "name": "PIM",
+    "name": "Admin Panel",
     "description": "",
-    "id": "pim",
+    "id": "admin-panel",
     "keyword": "Feature",
-    "uri": "features/PIM.feature",
+    "uri": "features/Admin.feature",
     "tags": [
       {
         "line": 3,
-        "name": "@Main_feature"
+        "name": "@Admin_Panel"
       }
     ]
   }

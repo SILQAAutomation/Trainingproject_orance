@@ -1,20 +1,20 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/PIM.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Admin.feature");
 formatter.feature({
   "comments": [
     {
       "line": 1,
-      "value": "#OrangeHRM Application PIM Feature File"
+      "value": "#Test Scenarios for Orange HRM Admin Panel"
     }
   ],
   "line": 4,
-  "name": "PIM",
+  "name": "Admin Panel",
   "description": "",
-  "id": "pim",
+  "id": "admin-panel",
   "keyword": "Feature",
   "tags": [
     {
       "line": 3,
-      "name": "@Main_feature"
+      "name": "@Admin_Panel"
     }
   ]
 });
@@ -22,19 +22,19 @@ formatter.scenarioOutline({
   "comments": [
     {
       "line": 6,
-      "value": "#Scenario1 - PIM"
+      "value": "#Scenario1 - Login to the Orange HRM System"
     }
   ],
   "line": 8,
-  "name": "Successful adding of PIM",
+  "name": "Login to the System",
   "description": "",
-  "id": "pim;successful-adding-of-pim",
+  "id": "admin-panel;login-to-the-system",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 7,
-      "name": "@Adding_PIM"
+      "name": "@Login"
     }
   ]
 });
@@ -65,44 +65,24 @@ formatter.step({
 });
 formatter.step({
   "line": 15,
-  "name": "I click on PIM Tab",
-  "keyword": "And "
+  "name": "I Click on Admin Section",
+  "keyword": "When "
 });
 formatter.step({
   "line": 16,
-  "name": "I Verify PIM Page",
-  "keyword": "And "
+  "name": "I Access Admin Panel",
+  "keyword": "Then "
 });
 formatter.step({
   "line": 17,
-  "name": "I Click on Add Employee Button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 18,
-  "name": "I Verify Add Employee Page",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 19,
-  "name": "I Input First Name \"\u003cFirst_Name\u003e\" and Last Name \"\u003cLast_Name\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 20,
-  "name": "I Click on Save Button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 21,
-  "name": "I Verify Personal Details Page",
+  "name": "I Search Username \"\u003cAdUser_Name\u003e\"",
   "keyword": "And "
 });
 formatter.examples({
-  "line": 24,
+  "line": 18,
   "name": "",
   "description": "",
-  "id": "pim;successful-adding-of-pim;",
+  "id": "admin-panel;login-to-the-system;",
   "rows": [
     {
       "cells": [
@@ -110,11 +90,10 @@ formatter.examples({
         "Browser",
         "User_Name",
         "Password",
-        "First_Name",
-        "Last_Name"
+        "AdUser_Name"
       ],
-      "line": 25,
-      "id": "pim;successful-adding-of-pim;;1"
+      "line": 19,
+      "id": "admin-panel;login-to-the-system;;1"
     },
     {
       "cells": [
@@ -122,34 +101,33 @@ formatter.examples({
         "Chrome",
         "Admin",
         "admin123",
-        "Raksha",
-        "Luchun"
+        "Admin"
       ],
-      "line": 26,
-      "id": "pim;successful-adding-of-pim;;2"
+      "line": 20,
+      "id": "admin-panel;login-to-the-system;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 73600,
+  "duration": 65100,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 26,
-  "name": "Successful adding of PIM",
+  "line": 20,
+  "name": "Login to the System",
   "description": "",
-  "id": "pim;successful-adding-of-pim;;2",
+  "id": "admin-panel;login-to-the-system;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 3,
-      "name": "@Main_feature"
+      "line": 7,
+      "name": "@Login"
     },
     {
-      "line": 7,
-      "name": "@Adding_PIM"
+      "line": 3,
+      "name": "@Admin_Panel"
     }
   ]
 });
@@ -187,41 +165,20 @@ formatter.step({
 });
 formatter.step({
   "line": 15,
-  "name": "I click on PIM Tab",
-  "keyword": "And "
+  "name": "I Click on Admin Section",
+  "keyword": "When "
 });
 formatter.step({
   "line": 16,
-  "name": "I Verify PIM Page",
-  "keyword": "And "
+  "name": "I Access Admin Panel",
+  "keyword": "Then "
 });
 formatter.step({
   "line": 17,
-  "name": "I Click on Add Employee Button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 18,
-  "name": "I Verify Add Employee Page",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 19,
-  "name": "I Input First Name \"Raksha\" and Last Name \"Luchun\"",
+  "name": "I Search Username \"Admin\"",
   "matchedColumns": [
-    4,
-    5
+    4
   ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 20,
-  "name": "I Click on Save Button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 21,
-  "name": "I Verify Personal Details Page",
   "keyword": "And "
 });
 formatter.match({
@@ -234,14 +191,14 @@ formatter.match({
   "location": "Steps.iAmOnOrangeMainPage(String)"
 });
 formatter.result({
-  "duration": 7287713100,
+  "duration": 8133935401,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.iVerifyLoginPage()"
 });
 formatter.result({
-  "duration": 2419639800,
+  "duration": 3863526300,
   "status": "passed"
 });
 formatter.match({
@@ -258,88 +215,88 @@ formatter.match({
   "location": "Steps.iInputUserNameAndPassword(String,String)"
 });
 formatter.result({
-  "duration": 363679900,
+  "duration": 295753199,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.iClickOnSignInButton()"
 });
 formatter.result({
-  "duration": 1809812400,
+  "duration": 124433500,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.iVerifyWelcomeLabel()"
 });
 formatter.result({
-  "duration": 5828647500,
+  "duration": 16115269699,
   "status": "passed"
 });
 formatter.match({
-  "location": "Steps.iClickOnPIMTab()"
+  "location": "Steps.iClickOnAdminSection()"
 });
 formatter.result({
-  "duration": 1329956300,
+  "duration": 13004556800,
   "status": "passed"
 });
 formatter.match({
-  "location": "Steps.iVerifyPIMPage()"
+  "location": "Steps.iAccessAdminPanel()"
 });
 formatter.result({
-  "duration": 1114570800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.iClickOnAddEmployeeButton()"
-});
-formatter.result({
-  "duration": 1100241700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.iVerifyAddEmployeePage()"
-});
-formatter.result({
-  "duration": 637200200,
+  "duration": 9816489500,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Raksha",
-      "offset": 20
-    },
-    {
-      "val": "Luchun",
-      "offset": 43
+      "val": "Admin",
+      "offset": 19
     }
   ],
-  "location": "Steps.iInputFirstNameAndLastName(String,String)"
+  "location": "Steps.iSearchUsername(String)"
 });
 formatter.result({
-  "duration": 455540500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.iClickOnSaveButton()"
-});
-formatter.result({
-  "duration": 382497500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.iVerifyPersonalDetailsPage()"
-});
-formatter.result({
-  "duration": 6489502700,
+  "duration": 8760690401,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1421043800,
+  "duration": 1855771899,
   "status": "passed"
 });
 formatter.after({
-  "duration": 132700,
+  "duration": 120401,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 27300,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 22,
+      "value": "#Scenario2 - Access and verify Admin Panel"
+    }
+  ],
+  "line": 24,
+  "name": "Access Admin Panel",
+  "description": "",
+  "id": "admin-panel;access-admin-panel",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 23,
+      "name": "@Admin"
+    }
+  ]
+});
+formatter.after({
+  "duration": 5431999,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 30900,
   "status": "passed"
 });
 });
