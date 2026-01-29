@@ -3,7 +3,7 @@
     "comments": [
       {
         "line": 1,
-        "value": "#Overtime"
+        "value": "#Test Scenarios for Orange HRM Admin Panel"
       }
     ],
     "line": 4,
@@ -12,7 +12,7 @@
         "before": [
           {
             "result": {
-              "duration": 58900,
+              "duration": 65100,
               "status": "passed"
             },
             "match": {
@@ -20,14 +20,14 @@
             }
           }
         ],
-        "line": 18,
-        "name": "Successful Sign In",
+        "line": 20,
+        "name": "Login to the System",
         "description": "",
-        "id": "sign-in;successful-sign-in;;2",
+        "id": "admin-panel;login-to-the-system;;2",
         "after": [
           {
             "result": {
-              "duration": 1560535200,
+              "duration": 1855771899,
               "status": "passed"
             },
             "match": {
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 46500,
+              "duration": 120401,
               "status": "passed"
             },
             "match": {
@@ -49,7 +49,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8052050800,
+              "duration": 8133935401,
               "status": "passed"
             },
             "line": 10,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 1373895200,
+              "duration": 3863526300,
               "status": "passed"
             },
             "line": 11,
@@ -82,7 +82,7 @@
           },
           {
             "result": {
-              "duration": 510541900,
+              "duration": 295753199,
               "status": "passed"
             },
             "line": 12,
@@ -108,7 +108,7 @@
           },
           {
             "result": {
-              "duration": 3571244600,
+              "duration": 124433500,
               "status": "passed"
             },
             "line": 13,
@@ -120,7 +120,7 @@
           },
           {
             "result": {
-              "duration": 6174433800,
+              "duration": 16115269699,
               "status": "passed"
             },
             "line": 14,
@@ -129,29 +129,125 @@
               "location": "Steps.iVerifyWelcomeLabel()"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13004556800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I Click on Admin Section",
+            "match": {
+              "location": "Steps.iClickOnAdminSection()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9816489500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I Access Admin Panel",
+            "match": {
+              "location": "Steps.iAccessAdminPanel()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8760690401,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I Search Username \"Admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Admin",
+                  "offset": 19
+                }
+              ],
+              "location": "Steps.iSearchUsername(String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "line": 3,
-            "name": "@Main_feature"
+            "line": 7,
+            "name": "@Login"
           },
           {
-            "line": 7,
-            "name": "@sucessful_Sign_In"
+            "line": 3,
+            "name": "@Admin_Panel"
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 22,
+            "value": "#Scenario2 - Access and verify Admin Panel"
+          }
+        ],
+        "before": [
+          {
+            "result": {
+              "duration": 27300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Access Admin Panel",
+        "description": "",
+        "id": "admin-panel;access-admin-panel",
+        "after": [
+          {
+            "result": {
+              "duration": 5431999,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.setup()"
+            }
+          },
+          {
+            "result": {
+              "duration": 30900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "tags": [
+          {
+            "line": 23,
+            "name": "@Admin"
           }
         ]
       }
     ],
-    "name": "Sign_in",
+    "name": "Admin Panel",
     "description": "",
-    "id": "sign-in",
+    "id": "admin-panel",
     "keyword": "Feature",
-    "uri": "features/Login.feature",
+    "uri": "features/Admin.feature",
     "tags": [
       {
         "line": 3,
-        "name": "@Main_feature"
+        "name": "@Admin_Panel"
       }
     ]
   }

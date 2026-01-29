@@ -53,7 +53,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jan 27, 2026 03:59:39 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Jan 29, 2026 02:09:53 PM</span>
 				</a>
 			</li>
 			<li>
@@ -91,8 +91,9 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@Main_feature</a></li>
-					<li><a href='#'>@sucessful_Sign_In</a></li>
+					<li><a href='#'>@Admin_Panel</a></li>
+					<li><a href='#'>@Login</a></li>
+					<li><a href='#'>@Admin</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -155,7 +156,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -170,7 +171,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -189,27 +190,27 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Sign_in</span>
-						<span class='test-time'>Jan 27, 2026 03:59:39 PM</span>
+						<span class='test-name'>Admin Panel</span>
+						<span class='test-time'>Jan 29, 2026 02:09:53 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 19s+740ms</span>
+	<span class='duration right label'>0h 1m 0s+202ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">Successful Sign In</span>
+		<span class="desc-text">Login to the System</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class='category-list'>
-				<span class='category label white-text'>@Main_feature</span>
-				<span class='category label white-text'>@sucessful_Sign_In</span>
+				<span class='category label white-text'>@Login</span>
+				<span class='category label white-text'>@Admin_Panel</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Successful Sign In</span>
+			<span class="bdd-step-name">Login to the System</span>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
@@ -232,9 +233,31 @@
 						<span class="bdd-step-name">And I Verify Welcome Label</span>
 							<div class='pre'>passed</div>
 					</li>
+					<li test-id='9' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I Click on Admin Section</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='10' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I Access Admin Panel</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='11' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I Search Username "Admin"</span>
+							<div class='pre'>passed</div>
+					</li>
 				</ul>
 		</li>
 	</ul>
+</div>
+<div class='scenario node' test-id='12' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Admin</span>
+	</div>
+	<span class='duration right label'>0h 0m 0s+0ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Access Admin Panel</span>
+	</div>
 </div>
 					</div>
 				</li>
@@ -290,7 +313,7 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Main_feature</span>
+						<span class='category-name'>@Admin_Panel</span>
 						<span class='category-status right'>
 							<span class='label pass'>2</span>
 						</span>
@@ -313,13 +336,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 27, 2026 03:59:39 PM</td>
-										<td class='linked' test-id='1'>Sign_in</td>
+										<td>Jan 29, 2026 02:09:53 PM</td>
+										<td class='linked' test-id='1'>Admin Panel</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 27, 2026 03:59:39 PM</td>
-										<td class='linked' test-id='3'>Sign_in.Successful Sign In.Successful Sign In</td>
+										<td>Jan 29, 2026 02:09:53 PM</td>
+										<td class='linked' test-id='3'>Admin Panel.Login to the System.Login to the System</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -329,7 +352,7 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@sucessful_Sign_In</span>
+						<span class='category-name'>@Login</span>
 						<span class='category-status right'>
 							<span class='label pass'>1</span>
 						</span>
@@ -352,8 +375,42 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 27, 2026 03:59:39 PM</td>
-										<td class='linked' test-id='3'>Sign_in.Successful Sign In.Successful Sign In</td>
+										<td>Jan 29, 2026 02:09:53 PM</td>
+										<td class='linked' test-id='3'>Admin Panel.Login to the System.Login to the System</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Admin</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 29, 2026 02:10:56 PM</td>
+										<td class='linked' test-id='12'>Admin Panel.Access Admin Panel</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -388,31 +445,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 27, 2026 03:59:39 PM</div>
+					<div class='panel-lead'>Jan 29, 2026 02:09:53 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 27, 2026 04:00:01 PM</div>
+			 		<div class='panel-lead'>Jan 29, 2026 02:10:56 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>21,388ms</div>
+					<div class='panel-lead'>62,209ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -426,7 +483,7 @@
 						</tr>
 							<tr>
 								<td>user</td>
-								<td>suraj.joggessur</td>
+								<td>ali.nauzeer</td>
 							</tr>
 					</table>
 				</div>
@@ -444,7 +501,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Main_feature</td>
+							<td>@Admin_Panel</td>
 							<td>2</td>
 							<td>0</td>
 							<td>0</td>
@@ -453,7 +510,16 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@sucessful_Sign_In</td>
+							<td>@Login</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Admin</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -474,6 +540,7 @@
 		
 		<div class='card-panel'>
 				Sample test runner output message
+				Sample test runner output message
 		</div>
 	</div>
 </div>
@@ -491,7 +558,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 1,
+				passChild: 2,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -500,7 +567,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 5,
+				passGrandChild: 8,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

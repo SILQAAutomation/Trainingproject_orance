@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
                 "pretty",
                 "json:target/cucumber-reports/cucumber.json" // Specify the JSON report path
         }
-        ,tags = "@sucessful_Sign_In"
+        ,tags = "@Admin_Panel"
 
 )
 
