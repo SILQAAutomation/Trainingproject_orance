@@ -10,6 +10,7 @@ public class Login_page {
     //Objects
 //Object for company branding
     private static By img_company_branding = By.xpath("//img[@alt='company-branding']");
+
     public static WebElement company_branding(WebDriver driver) {
         element = driver.findElement(img_company_branding);
         return element;
@@ -17,6 +18,7 @@ public class Login_page {
 
     //Object for username/ field
     private static By txt_username = By.xpath("//input[@placeholder='Username']");
+
     public static WebElement username(WebDriver driver) {
         return driver.findElement(txt_username);
 
@@ -32,19 +34,21 @@ public class Login_page {
 
     //Object for Login button
     private static By btn_login = By.xpath("//button[normalize-space()='Login']");
+
     public static WebElement login(WebDriver driver) {
         element = driver.findElement(btn_login);
         return element;
     }
 
-    //Object for client brand banner
-    private static By img_client_brand_banner = By.xpath("//img[@alt='client-brand-banner']");
-    public static WebElement client_brand_banner(WebDriver driver) {
-        element = driver.findElement(img_client_brand_banner);
+    //Object for dashboard logo
+    private static By img_dashboard_logo = By.xpath("//img[@alt='client-brand-banner']");
+    public static WebElement dashboard_logo(WebDriver driver) {
+        element = driver.findElement(img_dashboard_logo);
         return element;
     }
-
 }
+
+
 
 //Object for
 //    private static By XXXX = By.xpath("XXXX");
