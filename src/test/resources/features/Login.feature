@@ -11,7 +11,7 @@ Feature: Sign_in
     And I Verify Login Page
     And I Input User Name "<User_Name>" and Password "<Password>"
     When I Click on Sign In Button
-    And I Verify Welcome Label
+    And I Verify dashboard logo
 
     Examples:
       |SCN  |Browser |User_Name |Password |
