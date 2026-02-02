@@ -1,6 +1,6 @@
 #Test Scenarios for Orange HRM Admin Panel
 
-@Admin_Panel
+@Main_feature
 Feature: Admin Panel
 
   #Scenario1 - Login to the Orange HRM System
