@@ -21,68 +21,68 @@ formatter.feature({
 formatter.scenarioOutline({
   "comments": [
     {
-      "line": 6,
-      "value": "#Scenario1 - Login to the Orange HRM System"
+      "line": 48,
+      "value": "#Scenario3 - Search for the new User in Admin Panel by Username"
     }
   ],
-  "line": 8,
-  "name": "Login to the System",
+  "line": 50,
+  "name": "Search new User in Admin Panel",
   "description": "",
-  "id": "admin-panel;login-to-the-system",
+  "id": "admin-panel;search-new-user-in-admin-panel",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 7,
-      "name": "@Login"
+      "line": 49,
+      "name": "@Search_User"
     }
   ]
 });
 formatter.step({
-  "line": 10,
+  "line": 51,
   "name": "I am on Orange Main page \"\u003cBrowser\u003e\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 11,
+  "line": 52,
   "name": "I Verify Login Page",
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
+  "line": 53,
   "name": "I Input User Name \"\u003cUser_Name\u003e\" and Password \"\u003cPassword\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
+  "line": 54,
   "name": "I Click on Sign In Button",
   "keyword": "When "
 });
 formatter.step({
-  "line": 14,
+  "line": 55,
   "name": "I Verify Welcome Label",
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
+  "line": 56,
   "name": "I Click on Admin Section",
   "keyword": "When "
 });
 formatter.step({
-  "line": 16,
+  "line": 57,
   "name": "I Access Admin Panel",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 17,
-  "name": "I Search Username \"\u003cAdUser_Name\u003e\"",
-  "keyword": "And "
+  "line": 58,
+  "name": "I Verify User Added Successfully \"\u003cnUser_Name\u003e\"",
+  "keyword": "Then "
 });
 formatter.examples({
-  "line": 18,
+  "line": 60,
   "name": "",
   "description": "",
-  "id": "admin-panel;login-to-the-system;",
+  "id": "admin-panel;search-new-user-in-admin-panel;",
   "rows": [
     {
       "cells": [
@@ -90,10 +90,12 @@ formatter.examples({
         "Browser",
         "User_Name",
         "Password",
-        "AdUser_Name"
+        "Emp_Name",
+        "nUser_Name",
+        "nPassword"
       ],
-      "line": 19,
-      "id": "admin-panel;login-to-the-system;;1"
+      "line": 61,
+      "id": "admin-panel;search-new-user-in-admin-panel;;1"
     },
     {
       "cells": [
@@ -101,29 +103,31 @@ formatter.examples({
         "Chrome",
         "Admin",
         "admin123",
-        "Admin"
+        "Mr Pigeon San",
+        "Pigeon",
+        "admin12345"
       ],
-      "line": 20,
-      "id": "admin-panel;login-to-the-system;;2"
+      "line": 62,
+      "id": "admin-panel;search-new-user-in-admin-panel;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 65100,
+  "duration": 105700,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 20,
-  "name": "Login to the System",
+  "line": 62,
+  "name": "Search new User in Admin Panel",
   "description": "",
-  "id": "admin-panel;login-to-the-system;;2",
+  "id": "admin-panel;search-new-user-in-admin-panel;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 7,
-      "name": "@Login"
+      "line": 49,
+      "name": "@Search_User"
     },
     {
       "line": 3,
@@ -132,7 +136,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 10,
+  "line": 51,
   "name": "I am on Orange Main page \"Chrome\"",
   "matchedColumns": [
     1
@@ -140,12 +144,12 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "line": 11,
+  "line": 52,
   "name": "I Verify Login Page",
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
+  "line": 53,
   "name": "I Input User Name \"Admin\" and Password \"admin123\"",
   "matchedColumns": [
     2,
@@ -154,32 +158,32 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
+  "line": 54,
   "name": "I Click on Sign In Button",
   "keyword": "When "
 });
 formatter.step({
-  "line": 14,
+  "line": 55,
   "name": "I Verify Welcome Label",
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
+  "line": 56,
   "name": "I Click on Admin Section",
   "keyword": "When "
 });
 formatter.step({
-  "line": 16,
+  "line": 57,
   "name": "I Access Admin Panel",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 17,
-  "name": "I Search Username \"Admin\"",
+  "line": 58,
+  "name": "I Verify User Added Successfully \"Pigeon\"",
   "matchedColumns": [
-    4
+    5
   ],
-  "keyword": "And "
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -191,14 +195,14 @@ formatter.match({
   "location": "Steps.iAmOnOrangeMainPage(String)"
 });
 formatter.result({
-  "duration": 8133935401,
+  "duration": 8027633200,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.iVerifyLoginPage()"
 });
 formatter.result({
-  "duration": 3863526300,
+  "duration": 1294254100,
   "status": "passed"
 });
 formatter.match({
@@ -215,88 +219,56 @@ formatter.match({
   "location": "Steps.iInputUserNameAndPassword(String,String)"
 });
 formatter.result({
-  "duration": 295753199,
+  "duration": 484741600,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.iClickOnSignInButton()"
 });
 formatter.result({
-  "duration": 124433500,
+  "duration": 170984200,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.iVerifyWelcomeLabel()"
 });
 formatter.result({
-  "duration": 16115269699,
+  "duration": 7795130500,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.iClickOnAdminSection()"
 });
 formatter.result({
-  "duration": 13004556800,
+  "duration": 1783499100,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.iAccessAdminPanel()"
 });
 formatter.result({
-  "duration": 9816489500,
+  "duration": 6100828600,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Admin",
-      "offset": 19
+      "val": "Pigeon",
+      "offset": 34
     }
   ],
-  "location": "Steps.iSearchUsername(String)"
+  "location": "Steps.iVerifyUserAddedSuccessfully(String)"
 });
 formatter.result({
-  "duration": 8760690401,
+  "duration": 19419132900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1855771899,
+  "duration": 1655140800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 120401,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 27300,
-  "status": "passed"
-});
-formatter.scenario({
-  "comments": [
-    {
-      "line": 22,
-      "value": "#Scenario2 - Access and verify Admin Panel"
-    }
-  ],
-  "line": 24,
-  "name": "Access Admin Panel",
-  "description": "",
-  "id": "admin-panel;access-admin-panel",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 23,
-      "name": "@Admin"
-    }
-  ]
-});
-formatter.after({
-  "duration": 5431999,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 30900,
+  "duration": 213101300,
   "status": "passed"
 });
 });

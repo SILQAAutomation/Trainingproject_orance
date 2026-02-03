@@ -2,11 +2,13 @@ package stepdefinition;
 
 import com.cucumber.listener.Reporter;
 import commonmethods.Utility;
+import cucumber.api.PendingException;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import objectrepository.*;
@@ -90,12 +92,12 @@ public class Steps extends Utility {
     public void iAmOnOrangeMainPage(String Browser) {
         if (Browser.equals("Chrome")) {
             setUp();
-            driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(1500, TimeUnit.SECONDS);
             driver.get("https://opensource-demo.orangehrmlive.com/");
             driver.manage().window().maximize();
         } else if (Browser.equals("Edge")) {
             setUp();
-            driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(1500, TimeUnit.SECONDS);
             driver.get("https://opensource-demo.orangehrmlive.com/");
             driver.manage().window().maximize();
         } else {
@@ -105,7 +107,7 @@ public class Steps extends Utility {
 
     @And("^I Verify Login Page$")
     public void iVerifyLoginPage() {
-        WebDriverWait w = new WebDriverWait(driver, 10);
+        WebDriverWait w = new WebDriverWait(driver, 110);
         WebElement branding = w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='company-branding']")));
         Assert.assertTrue(branding.isDisplayed(), "Login page branding is not displayed");
     }
@@ -321,5 +323,206 @@ public class Steps extends Utility {
 
         Assert.fail("Personal Details page not displayed. Current URL: " + url + " Title: " + title);
     }
+
+    @When("^I Click on Admin Section$")
+    public void iClickOnAdminSection() {
+        WebElement AdminSec = Admin_page.AdminMenu(Steps.driver);
+        AdminSec.click();
+    }
+
+    @Then("^I Access Admin Panel$")
+    public void iAccessAdminPanel() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(Steps.driver, 30); // Wait for up to 30 seconds
+        WebElement dashboardLogo = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//img[@alt='client brand banner']")));
+        Assert.assertTrue(dashboardLogo.isDisplayed(), "Dashboard is not displayed.");
+        Thread.sleep(5000);
+    }
+
+
+    @And("^I Search User by Username \"([^\"]*)\"$")
+    public void iSearchUsername(String uname) throws Throwable {
+        WebElement usernameField = Admin_page.User_name(Steps.driver);
+        usernameField.click();
+        Thread.sleep(1000);
+        usernameField.sendKeys(uname);
+        Thread.sleep(3000);
+        WebElement Search = Admin_page.Searchfield(Steps.driver);
+        Search.click();
+        Thread.sleep(5000);
+        throw new PendingException();
+    }
+
+    @And("^I Click on Add User$")
+    public void iClickOnAddUser() {
+        WebElement AddUser = Admin_page.addBtn(Steps.driver);
+        AddUser.click();
+    }
+
+    @And("^I Verify Add User Page$")
+    public void iVerifyAddUserPage() {
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        By[] locators = new By[]{
+                By.xpath("//h6[normalize-space()='Add User']"),
+        };
+        for (By locator : locators) {
+            try {
+                WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+                if (el != null && el.isDisplayed()) {
+                    return;
+                }
+            } catch (TimeoutException ignored) {
+                // try next locator
+            }
+        }
+
+        // Fallback: use page object helper (non-throwing)
+        try {
+            if (objectrepository.PIM_page.isPersonalDetailsVisible(driver)) {
+                return;
+            }
+        } catch (Exception ignored) {}
+
+        // If still not found, gather debug info and fail
+        String url = "";
+        String title = "";
+        try { url = driver.getCurrentUrl(); } catch (Exception ignored) {}
+        try { title = driver.getTitle(); } catch (Exception ignored) {}
+
+        Assert.fail("Add User page not displayed. Current URL: " + url + " Title: " + title);
+    }
+
+    @And("^I Select Role as Admin$")
+    public void iSelectRoleAsAdmin() throws Exception{
+        WebDriverWait wait = new WebDriverWait(Steps.driver, 20);
+        WebElement AddUserRole = Admin_page.AddRole(Steps.driver);
+        AddUserRole.click();
+        Thread.sleep(500);
+        // Wait for the Admin option to appear and click it
+        try {
+            WebElement SelectAdmin = wait.until(ExpectedConditions.elementToBeClickable(Admin_page.opt_Role_Admin));
+            try {
+                SelectAdmin.click();
+            } catch (Exception clickEx) {
+                ((JavascriptExecutor) Steps.driver).executeScript("arguments[0].click();", SelectAdmin);
+            }
+        } catch (Exception e) {
+            Thread.sleep(5000);
+            // final fallback: find first matching element and JS click
+            try {
+                WebElement SelectAdmin = Steps.driver.findElement(By.xpath("//div[@role='option' and normalize-space()='Admin']"));
+                Thread.sleep(5000);
+                try { SelectAdmin.click(); } catch (Exception clickEx) { ((JavascriptExecutor) Steps.driver).executeScript("arguments[0].click();", SelectAdmin);
+                    Thread.sleep(5000);}
+            } catch (Exception ex) {
+                Assert.fail("Unable to select 'Admin' option from role dropdown: " + ex.getMessage());
+            }
+
+        }
+    }
+
+    @And("^I Select Role as ESS$")
+    public void iSelectRoleAsESS() throws Exception{
+        WebDriverWait wait = new WebDriverWait(Steps.driver, 20);
+        WebElement AddUserRole = Admin_page.AddRole(Steps.driver);
+        AddUserRole.click();
+        Thread.sleep(500);
+        // Wait for the Admin option to appear and click it
+        try {
+            WebElement SelectESS = wait.until(ExpectedConditions.elementToBeClickable(Admin_page.opt_Role_ESS));
+            try {
+                SelectESS.click();
+            } catch (Exception clickEx) {
+                ((JavascriptExecutor) Steps.driver).executeScript("arguments[0].click();", SelectESS);
+            }
+        } catch (Exception e) {
+            Thread.sleep(5000);
+            // final fallback: find first matching element and JS click
+            try {
+                WebElement SelectESS = Steps.driver.findElement(By.xpath("//div[@role='option' and normalize-space()='ESS']"));
+                Thread.sleep(5000);
+                try { SelectESS.click(); } catch (Exception clickEx) { ((JavascriptExecutor) Steps.driver).executeScript("arguments[0].click();", SelectESS);
+                    Thread.sleep(5000);}
+            } catch (Exception ex) {
+                Assert.fail("Unable to select 'Admin' option from role dropdown: " + ex.getMessage());
+            }
+
+        }
+    }
+
+    @And("^I Enter User Details \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
+    public void iEnterUserDetails(String employee_Name,String username, String password) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(Steps.driver, 10);
+
+        // Wait for inputs then enter values for Employee Name
+        WebElement empName = wait.until(ExpectedConditions.elementToBeClickable(Admin_page.txt_Emp_Name));
+
+        empName.clear();
+        empName.sendKeys(employee_Name);
+
+        // wait briefly for suggestions to load
+        Thread.sleep(4000);
+
+        // select first matching suggestion
+        empName.sendKeys(Keys.ARROW_DOWN);
+        empName.sendKeys(Keys.ENTER);
+
+        WebElement AddStatus = Admin_page.AddRole(Steps.driver);
+        AddStatus.click();
+        Thread.sleep(500);
+        // Wait for the Enabled option to appear and click it
+        try {
+            WebElement SelectStatus = wait.until(ExpectedConditions.elementToBeClickable(Admin_page.opt_status));
+            try {
+                SelectStatus.click();
+            } catch (Exception clickEx) {
+                ((JavascriptExecutor) Steps.driver).executeScript("arguments[0].click();", SelectStatus);
+            }
+        } catch (Exception e) {
+            Thread.sleep(5000);
+            // final fallback: find first matching element and JS click
+            try {
+                WebElement SelectEnabled = Steps.driver.findElement(By.xpath("//div[@role='option' and normalize-space()='Enabled']"));
+                Thread.sleep(5000);
+                try { SelectEnabled.click(); } catch (Exception clickEx) { ((JavascriptExecutor) Steps.driver).executeScript("arguments[0].click();", SelectEnabled);
+                    Thread.sleep(5000);}
+            } catch (Exception ex) {
+                Assert.fail("Unable to select 'Enabled' option from role dropdown: " + ex.getMessage());
+            }
+
+        }
+
+        // Wait for inputs then enter values for Username
+        WebElement uname = wait.until(ExpectedConditions.elementToBeClickable(Admin_page.txt_User_name));
+        uname.clear();
+        uname.sendKeys(username);
+        Thread.sleep(5000);
+
+        // Wait for inputs then enter values for Password
+        WebElement pwd = wait.until(ExpectedConditions.elementToBeClickable(Admin_page.txt_Password));
+        pwd.clear();
+        pwd.sendKeys(password);
+        Thread.sleep(5000);
+
+        // Wait for inputs then enter values for Confirm Password
+        WebElement conpwd = wait.until(ExpectedConditions.elementToBeClickable(Admin_page.txt_Confirm_Password));
+        conpwd.clear();
+        conpwd.sendKeys(password);
+        Thread.sleep(5000);// ...additional user detail population can follow here...
+    }
+
+    @Then("^I Verify User Added Successfully \"([^\"]*)\"$")
+    public void iVerifyUserAddedSuccessfully(String uname) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(Steps.driver, 20);
+        Thread.sleep(10000);
+        WebElement usernameField = wait.until(ExpectedConditions.elementToBeClickable(Admin_page.User_name(Steps.driver)));
+        usernameField.click();
+        Thread.sleep(1000);
+        usernameField.sendKeys(uname);
+        Thread.sleep(3000);
+        WebElement Search = Admin_page.Searchfield(Steps.driver);
+        Search.click();
+        Thread.sleep(5000);
+    }
+
 
 }

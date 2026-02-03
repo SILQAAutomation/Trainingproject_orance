@@ -53,7 +53,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jan 29, 2026 02:09:53 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 3, 2026 11:43:59 AM</span>
 				</a>
 			</li>
 			<li>
@@ -92,8 +92,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@Admin_Panel</a></li>
-					<li><a href='#'>@Login</a></li>
-					<li><a href='#'>@Admin</a></li>
+					<li><a href='#'>@Search_User</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -156,7 +155,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -191,26 +190,26 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Admin Panel</span>
-						<span class='test-time'>Jan 29, 2026 02:09:53 PM</span>
+						<span class='test-time'>Feb 3, 2026 11:44:00 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 1m 0s+202ms</span>
+	<span class='duration right label'>0h 0m 45s+205ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">Login to the System</span>
+		<span class="desc-text">Search new User in Admin Panel</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class='category-list'>
-				<span class='category label white-text'>@Login</span>
+				<span class='category label white-text'>@Search_User</span>
 				<span class='category label white-text'>@Admin_Panel</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Login to the System</span>
+			<span class="bdd-step-name">Search new User in Admin Panel</span>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
@@ -241,23 +240,13 @@
 						<span class="bdd-step-name">Then I Access Admin Panel</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='11' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And I Search Username "Admin"</span>
+					<li test-id='11' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I Verify User Added Successfully "Pigeon"</span>
 							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
 	</ul>
-</div>
-<div class='scenario node' test-id='12' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@Admin</span>
-	</div>
-	<span class='duration right label'>0h 0m 0s+0ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Access Admin Panel</span>
-	</div>
 </div>
 					</div>
 				</li>
@@ -336,13 +325,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 29, 2026 02:09:53 PM</td>
+										<td>Feb 3, 2026 11:44:00 AM</td>
 										<td class='linked' test-id='1'>Admin Panel</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 29, 2026 02:09:53 PM</td>
-										<td class='linked' test-id='3'>Admin Panel.Login to the System.Login to the System</td>
+										<td>Feb 3, 2026 11:44:00 AM</td>
+										<td class='linked' test-id='3'>Admin Panel.Search new User in Admin Panel.Search new User in Admin Panel</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -352,7 +341,7 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Login</span>
+						<span class='category-name'>@Search_User</span>
 						<span class='category-status right'>
 							<span class='label pass'>1</span>
 						</span>
@@ -375,42 +364,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 29, 2026 02:09:53 PM</td>
-										<td class='linked' test-id='3'>Admin Panel.Login to the System.Login to the System</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Admin</span>
-						<span class='category-status right'>
-							<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 29, 2026 02:10:56 PM</td>
-										<td class='linked' test-id='12'>Admin Panel.Access Admin Panel</td>
+										<td>Feb 3, 2026 11:44:00 AM</td>
+										<td class='linked' test-id='3'>Admin Panel.Search new User in Admin Panel.Search new User in Admin Panel</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -445,7 +400,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -457,19 +412,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 29, 2026 02:09:53 PM</div>
+					<div class='panel-lead'>Feb 3, 2026 11:43:59 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 29, 2026 02:10:56 PM</div>
+			 		<div class='panel-lead'>Feb 3, 2026 11:44:47 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>62,209ms</div>
+					<div class='panel-lead'>47,317ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -510,16 +465,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@Login</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@Admin</td>
+							<td>@Search_User</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -540,7 +486,6 @@
 		
 		<div class='card-panel'>
 				Sample test runner output message
-				Sample test runner output message
 		</div>
 	</div>
 </div>
@@ -558,7 +503,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 2,
+				passChild: 1,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,

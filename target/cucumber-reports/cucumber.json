@@ -12,7 +12,7 @@
         "before": [
           {
             "result": {
-              "duration": 65100,
+              "duration": 105700,
               "status": "passed"
             },
             "match": {
@@ -20,27 +20,27 @@
             }
           }
         ],
-        "line": 20,
-        "name": "Login to the System",
+        "line": 62,
+        "name": "Search new User in Admin Panel",
         "description": "",
-        "id": "admin-panel;login-to-the-system;;2",
+        "id": "admin-panel;search-new-user-in-admin-panel;;2",
         "after": [
           {
             "result": {
-              "duration": 1855771899,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Steps.setup()"
-            }
-          },
-          {
-            "result": {
-              "duration": 120401,
+              "duration": 1655140800,
               "status": "passed"
             },
             "match": {
               "location": "Steps.tearDown(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 213101300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.setup()"
             }
           }
         ],
@@ -49,10 +49,10 @@
         "steps": [
           {
             "result": {
-              "duration": 8133935401,
+              "duration": 8027633200,
               "status": "passed"
             },
-            "line": 10,
+            "line": 51,
             "name": "I am on Orange Main page \"Chrome\"",
             "match": {
               "arguments": [
@@ -70,10 +70,10 @@
           },
           {
             "result": {
-              "duration": 3863526300,
+              "duration": 1294254100,
               "status": "passed"
             },
-            "line": 11,
+            "line": 52,
             "name": "I Verify Login Page",
             "match": {
               "location": "Steps.iVerifyLoginPage()"
@@ -82,10 +82,10 @@
           },
           {
             "result": {
-              "duration": 295753199,
+              "duration": 484741600,
               "status": "passed"
             },
-            "line": 12,
+            "line": 53,
             "name": "I Input User Name \"Admin\" and Password \"admin123\"",
             "match": {
               "arguments": [
@@ -108,10 +108,10 @@
           },
           {
             "result": {
-              "duration": 124433500,
+              "duration": 170984200,
               "status": "passed"
             },
-            "line": 13,
+            "line": 54,
             "name": "I Click on Sign In Button",
             "match": {
               "location": "Steps.iClickOnSignInButton()"
@@ -120,10 +120,10 @@
           },
           {
             "result": {
-              "duration": 16115269699,
+              "duration": 7795130500,
               "status": "passed"
             },
-            "line": 14,
+            "line": 55,
             "name": "I Verify Welcome Label",
             "match": {
               "location": "Steps.iVerifyWelcomeLabel()"
@@ -132,10 +132,10 @@
           },
           {
             "result": {
-              "duration": 13004556800,
+              "duration": 1783499100,
               "status": "passed"
             },
-            "line": 15,
+            "line": 56,
             "name": "I Click on Admin Section",
             "match": {
               "location": "Steps.iClickOnAdminSection()"
@@ -144,10 +144,10 @@
           },
           {
             "result": {
-              "duration": 9816489500,
+              "duration": 6100828600,
               "status": "passed"
             },
-            "line": 16,
+            "line": 57,
             "name": "I Access Admin Panel",
             "match": {
               "location": "Steps.iAccessAdminPanel()"
@@ -156,85 +156,34 @@
           },
           {
             "result": {
-              "duration": 8760690401,
+              "duration": 19419132900,
               "status": "passed"
             },
-            "line": 17,
-            "name": "I Search Username \"Admin\"",
+            "line": 58,
+            "name": "I Verify User Added Successfully \"Pigeon\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Admin",
-                  "offset": 19
+                  "val": "Pigeon",
+                  "offset": 34
                 }
               ],
-              "location": "Steps.iSearchUsername(String)"
+              "location": "Steps.iVerifyUserAddedSuccessfully(String)"
             },
             "matchedColumns": [
-              4
+              5
             ],
-            "keyword": "And "
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 7,
-            "name": "@Login"
+            "line": 49,
+            "name": "@Search_User"
           },
           {
             "line": 3,
             "name": "@Admin_Panel"
-          }
-        ]
-      },
-      {
-        "comments": [
-          {
-            "line": 22,
-            "value": "#Scenario2 - Access and verify Admin Panel"
-          }
-        ],
-        "before": [
-          {
-            "result": {
-              "duration": 27300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Steps.before(Scenario)"
-            }
-          }
-        ],
-        "line": 24,
-        "name": "Access Admin Panel",
-        "description": "",
-        "id": "admin-panel;access-admin-panel",
-        "after": [
-          {
-            "result": {
-              "duration": 5431999,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Steps.setup()"
-            }
-          },
-          {
-            "result": {
-              "duration": 30900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Steps.tearDown(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "tags": [
-          {
-            "line": 23,
-            "name": "@Admin"
           }
         ]
       }

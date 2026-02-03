@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: cucumbertest.TestRunner_web
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.927 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.656 sec
