@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="cucumbertest.TestRunner_web" time="48.634" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="cucumbertest.TestRunner_web" time="111.819" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2024.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -39,7 +39,7 @@
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
     <property name="user.home" value="C:\Users\ali.nauzeer"/>
-    <property name="tags" value="&quot;--tags @Search_User&quot;"/>
+    <property name="tags" value="&quot;--tags @Add_ESS&quot;"/>
     <property name="user.timezone" value="Indian/Mauritius"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
@@ -49,7 +49,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-1.8\jre"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2024.2.3 clean test -D tags=&quot;--tags @Search_User&quot;"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2024.2.3 clean test -D tags=&quot;--tags @Add_ESS&quot;"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -67,5 +67,116 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="cucumbertest.TestRunner_web" name="runCukes" time="48.634"/>
+  <testcase classname="cucumbertest.TestRunner_web" name="runCukes" time="111.819">
+    <failure message="java.lang.NullPointerException" type="cucumber.runtime.CucumberException">cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCukes(TestNGCucumberRunner.java:57)
+	at cucumbertest.TestRunner_web.runCukes(TestRunner_web.java:26)
+Caused by: java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at stepdefinition.Steps.iEnterUserDetails(Steps.java:507)
+	at ✽.And I Enter User Details &quot;Testy Middle Man&quot;, &quot;PigeonESS&quot;, &quot;admin12345&quot;(features/Admin.feature:40)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@2cfb4a64
+#Test Scenarios for Orange HRM Admin Panel
+@Main_feature @Admin_Panel
+Feature: Admin Panel
+
+  #Scenario2 - Add a New ESS User to the OrangeHRM System
+  @Add_ESS
+  Scenario Outline: Add new ESS user in Admin Panel                      &amp;#27;[90m# features/Admin.feature:29&amp;#27;[0m
+    &amp;#27;[36mGiven &amp;#27;[0m&amp;#27;[36mI am on Orange Main page &quot;&lt;Browser&gt;&quot;&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Verify Login Page&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Input User Name &quot;&lt;User_Name&gt;&quot; and Password &quot;&lt;Password&gt;&quot;&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI Click on Sign In Button&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Verify Welcome Label&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI Click on Admin Section&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI Access Admin Panel&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Click on Add User&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Verify Add User Page&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Select Role as ESS&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Enter User Details &quot;&lt;Emp_Name&gt;&quot;, &quot;&lt;nUser_Name&gt;&quot;, &quot;&lt;nPassword&gt;&quot;&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Click on Save Button&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI Verify User Added Successfully &quot;&lt;nUser_Name&gt;&quot;&amp;#27;[0m
+
+    Examples: 
+Unable to take screenshot
+java.lang.NullPointerException
+
+  @Main_feature @Add_ESS @Admin_Panel
+  Scenario Outline: Add new ESS user in Admin Panel                        &amp;#27;[90m# features/Admin.feature:46&amp;#27;[0m
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on Orange Main page &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mChrome&amp;#27;[0m&amp;#27;[32m&quot;&amp;#27;[0m                                &amp;#27;[90m# Steps.iAmOnOrangeMainPage(String)&amp;#27;[0m
+    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI Verify Login Page&amp;#27;[0m                                                &amp;#27;[90m# Steps.iVerifyLoginPage()&amp;#27;[0m
+    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI Input User Name &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mTestyboi&amp;#27;[0m&amp;#27;[32m&quot; and Password &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mTest@1234&amp;#27;[0m&amp;#27;[32m&quot;&amp;#27;[0m              &amp;#27;[90m# Steps.iInputUserNameAndPassword(String,String)&amp;#27;[0m
+    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI Click on Sign In Button&amp;#27;[0m                                         &amp;#27;[90m# Steps.iClickOnSignInButton()&amp;#27;[0m
+    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI Verify Welcome Label&amp;#27;[0m                                             &amp;#27;[90m# Steps.iVerifyWelcomeLabel()&amp;#27;[0m
+    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI Click on Admin Section&amp;#27;[0m                                          &amp;#27;[90m# Steps.iClickOnAdminSection()&amp;#27;[0m
+    &amp;#27;[32mThen &amp;#27;[0m&amp;#27;[32mI Access Admin Panel&amp;#27;[0m                                              &amp;#27;[90m# Steps.iAccessAdminPanel()&amp;#27;[0m
+    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI Click on Add User&amp;#27;[0m                                                &amp;#27;[90m# Steps.iClickOnAddUser()&amp;#27;[0m
+    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI Verify Add User Page&amp;#27;[0m                                             &amp;#27;[90m# Steps.iVerifyAddUserPage()&amp;#27;[0m
+    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI Select Role as ESS&amp;#27;[0m                                               &amp;#27;[90m# Steps.iSelectRoleAsESS()&amp;#27;[0m
+    &amp;#27;[31mAnd &amp;#27;[0m&amp;#27;[31mI Enter User Details &quot;&amp;#27;[0m&amp;#27;[31m&amp;#27;[1mTesty Middle Man&amp;#27;[0m&amp;#27;[31m&quot;, &quot;&amp;#27;[0m&amp;#27;[31m&amp;#27;[1mPigeonESS&amp;#27;[0m&amp;#27;[31m&quot;, &quot;&amp;#27;[0m&amp;#27;[31m&amp;#27;[1madmin12345&amp;#27;[0m&amp;#27;[31m&quot;&amp;#27;[0m &amp;#27;[90m# Steps.iEnterUserDetails(String,String,String)&amp;#27;[0m
+      &amp;#27;[31mjava.lang.NullPointerException
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+      	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+      	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+      	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+      	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+      	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+      	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+      	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+      	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+      	at stepdefinition.Steps.iEnterUserDetails(Steps.java:507)
+      	at ?.And I Enter User Details &quot;Testy Middle Man&quot;, &quot;PigeonESS&quot;, &quot;admin12345&quot;(features/Admin.feature:40)
+      &amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI Click on Save Button&amp;#27;[0m                                             &amp;#27;[90m# Steps.iClickOnSaveButton()&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI Verify User Added Successfully &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mPigeonESS&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m                      &amp;#27;[90m# Steps.iVerifyUserAddedSuccessfully(String)&amp;#27;[0m
+
+&amp;#27;[31mFailed scenarios:&amp;#27;[0m
+&amp;#27;[31mfeatures/Admin.feature:46 &amp;#27;[0m# Scenario Outline: Add new ESS user in Admin Panel
+
+1 Scenarios (&amp;#27;[31m1 failed&amp;#27;[0m)
+13 Steps (&amp;#27;[31m1 failed&amp;#27;[0m, &amp;#27;[36m2 skipped&amp;#27;[0m, &amp;#27;[32m10 passed&amp;#27;[0m)
+1m50.584s
+
+java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at stepdefinition.Steps.iEnterUserDetails(Steps.java:507)
+	at ?.And I Enter User Details &quot;Testy Middle Man&quot;, &quot;PigeonESS&quot;, &quot;admin12345&quot;(features/Admin.feature:40)
+
+</system-out>
+    <system-err>SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+Starting ChromeDriver 144.0.7559.109 (6a8d5e49388fcc8a7d56d2a275e4ef424eb10960-refs/branch-heads/7559@{#4008}) on port 35734
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 35734.
+Feb 03, 2026 2:10:57 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+log4j:WARN No appenders could be found for logger (freemarker.cache).
+log4j:WARN Please initialize the log4j system properly.
+</system-err>
+  </testcase>
 </testsuite>

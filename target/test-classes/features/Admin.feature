@@ -1,6 +1,6 @@
 #Test Scenarios for Orange HRM Admin Panel
 
-@Admin_Panel
+@Main_feature @Admin_Panel
 Feature: Admin Panel
 
   #Scenario1 - Add a new Admin User to the OrangeHRM System
@@ -22,7 +22,7 @@ Feature: Admin Panel
     Then I Verify User Added Successfully "<nUser_Name>"
     Examples:
       |SCN  |Browser |User_Name |Password |Emp_Name  |nUser_Name |nPassword |
-      |1    |Chrome  |Admin     |admin123 |Mr Pigeon San |PigeonAdmin     |admin12345 |
+      |1    |Chrome  |Testyboi     |Test@1234 |Testy Middle Man |PigeonAdmin     |admin12345 |
 
   #Scenario2 - Add a New ESS User to the OrangeHRM System
   @Add_ESS
@@ -43,7 +43,7 @@ Feature: Admin Panel
 
     Examples:
       |SCN  |Browser |User_Name |Password |Emp_Name  |nUser_Name |nPassword |
-      |1    |Chrome  |Admin     |admin123 |Mr Pigeon San |PigeonESS     |admin12345 |
+      |1    |Chrome  |Testyboi  |Test@1234|Testy Middle Man  |PigeonESS     |admin12345 |
 
 #Scenario3 - Search for the new User in Admin Panel by Username
   @Search_User
@@ -59,4 +59,4 @@ Feature: Admin Panel
 
     Examples:
       |SCN  |Browser |User_Name |Password |Emp_Name  |nUser_Name |nPassword |
-      |1    |Chrome  |Admin     |admin123 |Mr Pigeon San |Pigeon     |admin12345 |
+      |1    |Chrome  |Testyboi  |Test@1234|Testy Middle Man |Pigeon     |admin12345 |

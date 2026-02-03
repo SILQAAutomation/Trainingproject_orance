@@ -39,6 +39,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1)" view='testrunner-logs-view'><i class='material-icons'>note</i></a></li>
 		</ul>
@@ -53,7 +54,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 3, 2026 11:43:59 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 3, 2026 02:10:55 PM</span>
 				</a>
 			</li>
 			<li>
@@ -79,6 +80,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -91,8 +94,9 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@Main_feature</a></li>
 					<li><a href='#'>@Admin_Panel</a></li>
-					<li><a href='#'>@Search_User</a></li>
+					<li><a href='#'>@Add_ESS</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -140,10 +144,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -155,10 +159,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -170,10 +174,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='76.923%'><span class='strong'>10</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='7.692%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='15.385%'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -187,29 +191,30 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Admin Panel</span>
-						<span class='test-time'>Feb 3, 2026 11:44:00 AM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Feb 3, 2026 02:10:55 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 45s+205ms</span>
+<div class='scenariooutline node' test-id='2' status='fail'>
+	<span class='duration right label'>0h 1m 49s+13ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">Search new User in Admin Panel</span>
+		<span class="desc-text">Add new ESS user in Admin Panel</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario pass' status='pass'>
+		<li test-id='3' class='node scenario fail' status='fail'>
 			<div class='category-list'>
-				<span class='category label white-text'>@Search_User</span>
+				<span class='category label white-text'>@Main_feature</span>
+				<span class='category label white-text'>@Add_ESS</span>
 				<span class='category label white-text'>@Admin_Panel</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Search new User in Admin Panel</span>
+			<span class="bdd-step-name">Add new ESS user in Admin Panel</span>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
@@ -221,7 +226,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='6' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And I Input User Name "Admin" and Password "admin123"</span>
+						<span class="bdd-step-name">And I Input User Name "Testyboi" and Password "Test@1234"</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='7' class='node when pass' status='pass'><b>When</b>
@@ -240,9 +245,43 @@
 						<span class="bdd-step-name">Then I Access Admin Panel</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='11' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then I Verify User Added Successfully "Pigeon"</span>
+					<li test-id='11' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I Click on Add User</span>
 							<div class='pre'>passed</div>
+					</li>
+					<li test-id='12' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I Verify Add User Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='13' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I Select Role as ESS</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='14' class='node and fail' status='fail'><b>And</b>
+						<span class="bdd-step-name">And I Enter User Details "Testy Middle Man", "PigeonESS", "admin12345"</span>
+							<div class='pre'><pre>java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at stepdefinition.Steps.iEnterUserDetails(Steps.java:507)
+	at ?.And I Enter User Details "Testy Middle Man", "PigeonESS", "admin12345"(features/Admin.feature:40)
+</pre></div>
+					</li>
+					<li test-id='15' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And I Click on Save Button</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='16' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then I Verify User Added Successfully "PigeonESS"</span>
+							<div class='pre'>skipped</div>
 					</li>
 				</ul>
 		</li>
@@ -302,15 +341,15 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Admin_Panel</span>
+						<span class='category-name'>@Main_feature</span>
 						<span class='category-status right'>
-							<span class='label pass'>2</span>
+							<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 					
@@ -325,14 +364,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 3, 2026 11:44:00 AM</td>
+										<td>Feb 3, 2026 02:10:55 PM</td>
 										<td class='linked' test-id='1'>Admin Panel</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Feb 3, 2026 11:44:00 AM</td>
-										<td class='linked' test-id='3'>Admin Panel.Search new User in Admin Panel.Search new User in Admin Panel</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Feb 3, 2026 02:10:55 PM</td>
+										<td class='linked' test-id='3'>Admin Panel.Add new ESS user in Admin Panel.Add new ESS user in Admin Panel</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -341,15 +380,15 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Search_User</span>
+						<span class='category-name'>@Admin_Panel</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 					
@@ -364,9 +403,48 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 3, 2026 11:44:00 AM</td>
-										<td class='linked' test-id='3'>Admin Panel.Search new User in Admin Panel.Search new User in Admin Panel</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Feb 3, 2026 02:10:55 PM</td>
+										<td class='linked' test-id='1'>Admin Panel</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 3, 2026 02:10:55 PM</td>
+										<td class='linked' test-id='3'>Admin Panel.Add new ESS user in Admin Panel.Add new ESS user in Admin Panel</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Add_ESS</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 3, 2026 02:10:55 PM</td>
+										<td class='linked' test-id='3'>Admin Panel.Add new ESS user in Admin Panel.Add new ESS user in Admin Panel</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -385,6 +463,81 @@
 	</div>
 </div>
 <!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.NullPointerException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Feb 3, 2026 02:12:18 PM</td>
+                                                        <td class='linked' test-id='14'>Admin Panel.Add new ESS user in Admin Panel.Add new ESS user in Admin Panel.And I Enter User Details "Testy Middle Man", "PigeonESS", "admin12345"</td>
+                                                        <td><pre><pre>java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at stepdefinition.Steps.iEnterUserDetails(Steps.java:507)
+	at ?.And I Enter User Details "Testy Middle Man", "PigeonESS", "admin12345"(features/Admin.feature:40)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -406,25 +559,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>8</div>
+					<div class='panel-lead'>13</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 3, 2026 11:43:59 AM</div>
+					<div class='panel-lead'>Feb 3, 2026 02:10:55 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 3, 2026 11:44:47 AM</div>
+			 		<div class='panel-lead'>Feb 3, 2026 02:12:46 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>47,317ms</div>
+					<div class='panel-lead'>110,842ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -456,21 +609,30 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Admin_Panel</td>
+							<td>@Main_feature</td>
+							<td>0</td>
 							<td>2</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
-							<td>@Search_User</td>
-							<td>1</td>
+							<td>@Admin_Panel</td>
 							<td>0</td>
+							<td>2</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@Add_ESS</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
 							</td>
 						</tr>
 					</table>
@@ -495,31 +657,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 1,
-				failChild: 0,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				
-				passGrandChild: 8,
-				failGrandChild: 0,
+				passGrandChild: 10,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 2,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 3,
 			};
 		</script>
 		
