@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-cucumbertest.TestRunner_web">
-              <span class="suite-name border-passed">cucumbertest.TestRunner_web</span>
+              <span class="suite-name border-failed">cucumbertest.TestRunner_web</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-cucumbertest.TestRunner_web" class="hide-methods passed suite-cucumbertest.TestRunner_web"> (hide)</a> <!-- hide-methods passed suite-cucumbertest.TestRunner_web -->
-                      <a href="#" panel-name="suite-cucumbertest.TestRunner_web" class="show-methods passed suite-cucumbertest.TestRunner_web"> (show)</a> <!-- show-methods passed suite-cucumbertest.TestRunner_web -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-cucumbertest.TestRunner_web" class="hide-methods failed suite-cucumbertest.TestRunner_web"> (hide)</a> <!-- hide-methods failed suite-cucumbertest.TestRunner_web -->
+                      <a href="#" panel-name="suite-cucumbertest.TestRunner_web" class="show-methods failed suite-cucumbertest.TestRunner_web"> (show)</a> <!-- show-methods failed suite-cucumbertest.TestRunner_web -->
                     </span>
-                    <div class="method-list-content passed suite-cucumbertest.TestRunner_web">
+                    <div class="method-list-content failed suite-cucumbertest.TestRunner_web">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-cucumbertest.TestRunner_web" title="cucumbertest.TestRunner_web" hash-for-method="runCukes">runCukes</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-cucumbertest.TestRunner_web -->
+                    </div> <!-- method-list-content failed suite-cucumbertest.TestRunner_web -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-cucumbertest.TestRunner_web" class="panel cucumbertest.TestRunner_web">
-          <div class="suite-cucumbertest.TestRunner_web-class-passed">
+          <div class="suite-cucumbertest.TestRunner_web-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">cucumbertest.TestRunner_web</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,12 +128,31 @@
                   <a name="runCukes">
                   </a> <!-- runCukes -->
                   <span class="method-name">runCukes</span>
+                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCukes(TestNGCucumberRunner.java:57)
+	at cucumbertest.TestRunner_web.runCukes(TestRunner_web.java:26)
+Caused by: java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:446)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at stepdefinition.Steps.iEnterUserDetails(Steps.java:507)
+	at ✽.And I Enter User Details &quot;Testy Middle Man&quot;, &quot;PigeonESS&quot;, &quot;admin12345&quot;(features/Admin.feature:40)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Example of using TestNGCucumberRunner to invoke Cucumber)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-cucumbertest.TestRunner_web-class-passed -->
+          </div> <!-- suite-cucumbertest.TestRunner_web-class-failed -->
         </div> <!-- panel cucumbertest.TestRunner_web -->
         <div panel-name="test-xml-cucumbertest.TestRunner_web" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -197,7 +216,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runCukes')
 data.setCell(0, 2, 'cucumbertest.TestRunner_web')
-data.setCell(0, 3, 63128);
+data.setCell(0, 3, 111809);
 window.suiteTableData['cucumbertest.TestRunner_web']= { tableData: data, tableDiv: 'times-div-cucumbertest.TestRunner_web'}
 return data;
 }
@@ -230,6 +249,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">cucumbertest.TestRunner_web</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runCukes</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->

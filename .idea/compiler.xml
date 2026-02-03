@@ -9,11 +9,5 @@
         <module name="Template" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="blaze_demo_store" target="1.8" />
-      <module name="Eastern" target="1.8" />
-      <module name="SFWF" target="1.8" />
-      <module name="SORMS" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
